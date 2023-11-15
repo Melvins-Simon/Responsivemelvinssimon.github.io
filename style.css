@@ -1,0 +1,363 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto+Slab', sans-serif;
+}
+/* Navigation Bar */
+nav{
+    position: fixed;
+    width: 100%;     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    height: 5rem;
+    top: 0;
+    z-index: 11; 
+    background-color: transparent;        
+   box-shadow: 0px 0px 20px white;
+}
+
+nav button{    
+    display: none;
+}
+
+
+/*Changing color of nav bar on scroll*/
+.window-scroll{
+    background-color: rgb(9, 9, 129);
+    box-shadow: 0px 0px 20px white;
+
+}
+
+nav img{
+    
+    cursor: pointer;
+    border-radius: 20px;
+   box-shadow: 0px 0px 20px white;
+   margin-left: 5%;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   
+   
+    
+}
+
+.navigation ul{
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.navigation ul li{
+    list-style: none;
+    margin-left: 30px;
+    margin-right: 2.5rem;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: whitesmoke; 
+    font-size: 16px;   
+    font-weight: 600;
+    padding-right: 5px;     
+    transition: 1s ease;    
+    text-shadow: 0px 0px 5px white;
+    
+}
+
+.navigation ul li a:hover{
+    color: red;        
+}
+
+
+/*Home*/
+
+#home{
+    background-image: linear-gradient(rgba(8, 8, 8, 0.774),rgba(2, 2, 53, 0.7)),url(img/beautifulPool.jpg);
+    width: 100%;
+    height: 100vh ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+    line-height: 1%;
+}
+
+#home h2{
+    color: whitesmoke;
+    font-size: 2.5rem;
+    letter-spacing: 1px; 
+    margin-bottom: 2.5rem;
+     
+    
+
+}
+
+#home p {
+    width: 50%;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 25px;  
+    margin-bottom: 2.5rem; 
+
+}
+
+#home a{
+    text-decoration: none;
+    font-size: 1.0rem;
+    padding: 13px 35px;    
+    font-weight: 600;
+    border-radius: 5px;       
+}
+
+#home a.blue{
+    color: #fff;
+    background-color: rgb(9, 9, 212);
+    transition: 0.8s ease;
+    box-shadow: 0px 0px 10px rgb(183, 240, 146);
+}
+
+#home a.blue:hover {
+    color: rgb(9, 9, 212);
+    background-color: #fff;
+
+}
+
+#home a.yellow {
+    color: #fff;
+    background-color: #ee1330;
+    transition: 0.8s ease;
+    box-shadow: 0px 0px 10px rgb(183, 240, 146);
+}
+
+#home a.yellow:hover {
+    color: #ee1330;
+    background-color: #fff;
+
+}
+
+/*Features*/
+
+#features{
+    padding: 5vw 8vw 0 8vw;
+    text-align: center; 
+    margin-bottom: 50PX;   
+}
+
+#features .main-features{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 25px;
+   
+}
+
+#features h2{
+    margin-bottom: 10px;
+}
+#features .f-fea{
+    background-color: rgb(229, 240, 248);
+    text-align: start;
+    border-color: blue;
+}
+
+#features .f-fea i{
+    font-size: 1.2rem;
+    color: rgb(44, 44, 80);
+    background-color: rgb(253, 186, 186);
+   padding: 10px 10px 10px 10px;
+   border-radius: 5px;
+   border-color: blue;
+   
+}
+
+#features .f-fea h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(46, 46, 59);
+    padding: 13px 10px 7px 10px;
+}
+
+#features .f-fea p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(70,70,87);
+    padding-bottom: 25px;
+    padding-left: 10px;
+
+}
+
+
+/*MEDIA QUERRIES TABLETS*/
+@media screen and (max-width: 1024px) {
+body{
+    background-color: #ee435a;
+}
+    .G-container{
+    width: 100%;
+}
+
+.window-scroll {
+    background: linear-gradient(rgba(11, 53, 243, 0.774),
+            rgba(245, 16, 16, 0.7));
+}
+#home h2{
+    font-size: 2.2rem;
+}
+
+#home p{
+    font-size: 1.2rem
+}
+#features h2,p{
+    color: white;
+}
+
+#features h2{
+    font-size: 1.8rem;
+}
+
+/* NAV BUTTONS*/
+nav button {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+   color: white;
+   cursor: pointer;
+   margin-right: 5%;
+}
+
+nav button#close-menu {
+    display: none;
+}
+
+.navigation ul{
+    margin-right: -55%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 26rem;        
+     gap: 0;
+     display: none;
+}
+
+.navigation ul li{
+    width: 100%;
+    height: 4rem;
+    animation: animatenavitems 400ms linear forwards;
+     transform-origin: top right;
+    opacity: 0;
+}
+
+.navigation ul li:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.navigation ul li:nth-child(3) {
+    animation-delay: 400ms;
+}
+
+.navigation ul li:nth-child(4) {
+    animation-delay: 600ms;
+}
+
+.navigation ul li:nth-child(5) {
+    animation-delay: 800ms;
+}
+
+/* COOL ANIMATION NAV ITEMS*/
+@keyframes animatenavitems {
+    0%{
+        transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        
+    }
+
+    100%{
+
+        transform: rotateZ(0) rotate(0) scale(1);
+        opacity: 1;
+    }
+    
+}
+.navigation ul li{
+    background-color: rgb(9, 9, 129);
+    box-shadow: 0px 0px 20px white;
+    width: 25rem;
+    height: 4rem;
+    display: grid;
+    text-align: center;
+    place-items: center; 
+    cursor: pointer;     
+    
+}
+
+.navigation ul li:hover{    
+    background: linear-gradient(rgba(20, 34, 230, 0.774),
+                rgba(251, 251, 253, 0.7));
+}
+
+
+.navigation ul li a:hover{
+    background-color: whitesmoke;
+}
+
+}
+
+
+/*MEDI query mobile phones*/
+
+@media screen and (max-width: 600px) {
+    body{
+        background: rgb(9,9,129);
+    }
+
+    .G-container{
+        max-width: 100%;
+    }
+
+.window-scroll{
+    background: linear-gradient(rgba(7, 31, 240, 0.774),
+            rgba(241, 241, 245, 0.7));
+}
+
+  #home h2 {
+      color: whitesmoke;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      line-height: 2rem;
+  }
+
+  #home p {
+      width: 50%;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 25px;
+      margin-bottom: 2.5rem;
+
+  }
+
+  .navigation ul li{
+    width: 15rem;
+    margin-right: 5rem;
+    overflow: hidden;    
+    cursor: pointer;
+  }
+
+  .navigation ul li:hover {
+      background: linear-gradient(rgba(230, 20, 20, 0.774),
+        rgba(18, 18, 238, 0.7));
+  }
+
+}
+  
